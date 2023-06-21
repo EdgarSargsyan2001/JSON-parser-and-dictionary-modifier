@@ -36,7 +36,7 @@ def object_to_string(obj={}, tab_level=1):
 
 class JSONParser:
     def __init__(self, file_info):
-        self.json_string = self.file_info_make_line(file_info)
+        self.json_string = self.string_info_make_line(file_info)
         self.pos = 0
 
     def parse(self):
@@ -107,7 +107,7 @@ class JSONParser:
         number_string = self.json_string[start_pos : self.pos]
         return int(number_string)
 
-    def file_info_make_line(self, file_info):
+    def string_info_make_line(self, file_info):
         str = ""
         for line in file_info:
             str += line.replace("\n", "")

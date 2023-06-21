@@ -1,6 +1,14 @@
-from program import *
+from functions import *
+import os
 
-rF = open(FILENAME,"r")
+if not os.path.isfile(os.getcwd() + "/" + FILENAME):
+    path = os.path.join((os.getcwd()), FILENAME)
+    f = open(FILENAME, "w")
+    f.write('{}')
+    f.close()
+
+rF = open(FILENAME, "r")
+print(rF)
 readFileInfo = rF.readlines()
 parsed_data = JSONParser(readFileInfo).parse()
 
@@ -9,12 +17,13 @@ if parsed_data == None:
 
 
 def foo():
-    print('!dial "*" to finish')
-    print('use "upd" to change')
-    print('use "del" to delete')
+    print('!use "*" to finish')
+    print('!use "upd" to change')
+    print('!use "del" to delete')
 
     while True:
-        command = input("Enter comand ") 
+        print( object_to_string(parsed_data) )
+        command = input("\nEnter comand ")
         keyword = command[0:3]
         if command == '*':
             break
@@ -26,14 +35,5 @@ def foo():
             add_in_dictionary(parsed_data,command)
         save_data_in_file(parsed_data,FILENAME)
 
-    
-        
+
 foo()
-
-
-
-
-
-
-
-

@@ -1,13 +1,3 @@
 {
-   "python": {
-      "info": {
-         "a": 44,
-         "b": 33
-      }
-   },
-   "student": {
-      "id": "file"
-   },
-   "alignment": "programmer",
-   "hOffset": "programmer"
+   "k": 9999
 }

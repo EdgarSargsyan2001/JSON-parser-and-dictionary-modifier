@@ -1,5 +1,5 @@
 from random import randrange
-from program import JSONParser ,change_in_dictionary,add_in_dictionary,delete_in_dictionary,save_data_in_file
+from functions import JSONParser ,change_in_dictionary,add_in_dictionary,delete_in_dictionary,save_data_in_file
 from parser_1 import object_to_string
 import os
 

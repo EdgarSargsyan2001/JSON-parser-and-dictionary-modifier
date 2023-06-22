@@ -57,6 +57,7 @@ def add_in_dictionary(obj, comand):
         return
 
     obj[key] = value  # everything is ok we can set value in object
+    return True
 
 
 def change_in_dictionary(obj, comand):
@@ -92,6 +93,7 @@ def change_in_dictionary(obj, comand):
         print("Warning: invalid value")
         return
     obj[key] = value  # everything is ok we can set value in object
+    return True
 
 
 def delete_in_dictionary(obj, comand):
@@ -113,4 +115,5 @@ def delete_in_dictionary(obj, comand):
         return
     
     obj = obj.pop(key)
- 
+    return True
+
